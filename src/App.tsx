@@ -17,8 +17,29 @@ import {
   LayoutDashboard
 } from 'lucide-react';
 import { motion } from 'motion/react';
+import { useEffect, useRef, useState } from 'react';
 
 export default function App() {
+  const videoSectionRef = useRef<HTMLDivElement | null>(null);
+  const [shouldPlayVideo, setShouldPlayVideo] = useState(false);
+
+  useEffect(() => {
+    if (!videoSectionRef.current) return;
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setShouldPlayVideo(true);
+        }
+      },
+      { threshold: 0.5 }
+    );
+
+    observer.observe(videoSectionRef.current);
+
+    return () => observer.disconnect();
+  }, []);
+
   const fadeIn = {
     initial: { opacity: 0, y: 20 },
     whileInView: { opacity: 1, y: 0 },
@@ -163,6 +184,34 @@ export default function App() {
                   Gestiona tus ventas y el estado de tus máquinas en tiempo real. Nuestra <strong>aplicación móvil</strong> está optimizada para <strong>Android</strong> y disponible como <strong>iOS app</strong>.
                 </p>
               </motion.div>
+            </div>
+          </div>
+        </section>
+
+        {/* Video Section */}
+        <section className="px-4 py-24">
+          <div className="max-w-6xl mx-auto">
+            <div className="text-center mb-12">
+              <motion.h2 {...fadeIn} className="text-3xl md:text-4xl font-bold text-white mb-4">Demo en Acción</motion.h2>
+              <motion.p {...fadeIn} transition={{ delay: 0.1 }} className="text-slate-400">
+                Mira cómo JeanPay moderniza el cobro en máquinas dispensadoras.
+              </motion.p>
+            </div>
+            <div
+              ref={videoSectionRef}
+              className="aspect-video w-full rounded-2xl overflow-hidden border border-white/10 shadow-2xl bg-black"
+            >
+              <iframe
+                className="w-full h-full"
+                src={
+                  shouldPlayVideo
+                    ? 'https://www.youtube.com/embed/BAkW7BzBsu4?autoplay=1&mute=1&rel=0&playsinline=1'
+                    : undefined
+                }
+                title="JeanPay Detalle"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+              />
             </div>
           </div>
         </section>
