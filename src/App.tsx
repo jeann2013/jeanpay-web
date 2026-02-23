@@ -153,7 +153,7 @@ export default function App() {
                 </div>
                 <h3 className="text-xl font-bold text-white mb-3">Intermediario Yappy</h3>
                 <p className="text-slate-400 leading-relaxed">
-                  Pagos rápidos y seguros directamente a tu cuenta bancaria sin complicaciones técnicas.
+                  Pagos atraves de JeanPay con Yappy desde una app movil.
                 </p>
               </motion.div>
               {/* Feature 2 */}
@@ -167,7 +167,7 @@ export default function App() {
                 </div>
                 <h3 className="text-xl font-bold text-white mb-3">Hardware IoT</h3>
                 <p className="text-slate-400 leading-relaxed">
-                  Conexión constante con Bluetooth para los Pagos.
+                  Conexión constante con Bluetooth, para hacer la entrega de productos, sin internet.
                 </p>
               </motion.div>
               {/* Feature 3 */}
@@ -181,7 +181,7 @@ export default function App() {
                 </div>
                 <h3 className="text-xl font-bold text-white mb-3">App Móvil Multiplataforma</h3>
                 <p className="text-slate-400 leading-relaxed">
-                  Gestiona tus ventas y el estado de tus máquinas en tiempo real. Nuestra <strong>aplicación móvil</strong> está optimizada para <strong>Android</strong> y disponible como <strong>iOS app</strong>.
+                  Gestiona tus ventas y el estado de tus ventas en tiempo real. Nuestra <strong>aplicación móvil</strong> está optimizada para <strong>Android</strong> y disponible como <strong>iOS app</strong>.
                 </p>
               </motion.div>
             </div>
@@ -272,10 +272,10 @@ export default function App() {
               <p className="text-white/80 text-lg md:text-xl mb-12 max-w-2xl mx-auto">
                 Únete a cientos de emprendedores que ya están digitalizando sus ventas y aceptando <strong>pagos online</strong> con JeanPay.
               </p>
-              <button className="bg-white text-primary hover:bg-slate-100 font-bold py-5 px-12 rounded-2xl transition-all shadow-2xl inline-flex items-center gap-3 text-lg group">
+              <a href="https://play.google.com/store/apps/details?id=com.bitbugsoluciones.jeanpay" target="_blank" rel="noopener noreferrer" className="bg-white text-primary hover:bg-slate-100 font-bold py-5 px-12 rounded-2xl transition-all shadow-2xl inline-flex items-center gap-3 text-lg group">
                 Descargar Aplicación Móvil
                 <ExternalLink size={20} className="group-hover:rotate-12 transition-transform" />
-              </button>
+              </a>
             </div>
           </motion.div>
         </section>
