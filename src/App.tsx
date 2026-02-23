@@ -199,13 +199,13 @@ export default function App() {
             </div>
             <div
               ref={videoSectionRef}
-              className="aspect-video w-full rounded-2xl overflow-hidden border border-white/10 shadow-2xl bg-black"
+              className="aspect-video w-full max-w-3xl mx-auto rounded-2xl overflow-hidden border border-white/10 shadow-2xl bg-black"
             >
               <iframe
                 className="w-full h-full"
                 src={
                   shouldPlayVideo
-                    ? 'https://www.youtube.com/embed/BAkW7BzBsu4?autoplay=1&mute=1&rel=0&playsinline=1'
+                    ? 'https://www.youtube.com/embed/BAkW7BzBsu4?autoplay=1&rel=0&playsinline=1'
                     : undefined
                 }
                 title="JeanPay Detalle"
