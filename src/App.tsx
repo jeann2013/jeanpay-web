@@ -83,7 +83,7 @@ export default function App() {
               transition={{ delay: 0.2 }}
               className="text-4xl md:text-7xl font-black leading-tight tracking-tight text-white max-w-4xl"
             >
-              Moderniza tus <span className="text-primary">máquinas dispensadoras</span> y machine vending con JeanPay
+              Moderniza tus <span className="text-primary">máquinas dispensadoras</span> y machine vending con Yappy y JeanPay
             </motion.h2>
             
             <motion.p 
